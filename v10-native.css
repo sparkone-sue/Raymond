@@ -1,0 +1,9 @@
+/* V10: fix Market hero image edge and height on GitHub Pages. */
+body .page-hero.market-hero{background:linear-gradient(90deg,rgba(8,29,47,.77),rgba(8,29,47,.20) 78%),url("assets/market-hero.webp") center 52%/cover no-repeat!important;display:flex!important;align-items:center!important;height:480px!important;min-height:480px!important;max-height:480px!important;position:relative!important;overflow:hidden!important;padding:0!important;isolation:auto!important}
+body .page-hero.market-hero>img,body .page-hero.market-hero>.page-hero-shade{display:none!important}
+body .page-hero.market-hero .page-hero-copy{position:relative!important;z-index:2!important;transform:none!important;max-width:1280px!important;width:100%!important;margin:0 auto!important;padding:32px!important;box-sizing:border-box!important}
+body .page-hero.market-hero h1{color:#fff!important;max-width:900px!important;font-size:clamp(2.8rem,5vw,4.8rem)!important;line-height:1.1!important}
+body .page-hero.market-hero p{color:#fff!important;max-width:700px!important}
+body.contact #raymond-google-response[hidden]{display:none!important}
+body.contact .native-message{min-height:1.5em}
+@media(max-width:760px){body .page-hero.market-hero{height:390px!important;min-height:390px!important;max-height:390px!important}body .page-hero.market-hero .page-hero-copy{padding:24px!important}}

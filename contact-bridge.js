@@ -1,1 +1,21 @@
-(function(){const form=document.getElementById('raymond-native-form');if(!form)return;const status=document.getElementById('native-form-status');const btn=form.querySelector('button[type=submit]');form.addEventListener('submit',async e=>{e.preventDefault();const endpoint=window.RAYMOND_FORM_ENDPOINT||'';if(!endpoint){status.textContent='The custom form is awaiting backend activation. Please use the original Google Form link below for now.';return;}btn.disabled=true;status.textContent='Sending...';const data=Object.fromEntries(new FormData(form).entries());try{await fetch(endpoint,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data)});status.textContent='Your message was sent to the submission endpoint. Please note that confirmation of storage is not available from this browser.';form.reset();}catch(err){status.textContent='Submission could not be sent. Please use the original Google Form link below.';}finally{btn.disabled=false;}});})();
+/* Native website UI, Google Forms submission. Google does not provide a public confirmation API. */
+(function(){
+ const form=document.getElementById('raymond-native-form');if(!form)return;
+ const frame=document.getElementById('raymond-google-response');
+ const status=document.getElementById('native-form-status');
+ const button=form.querySelector('button[type="submit"]');
+ let pending=false, initial=true;
+ frame.addEventListener('load',function(){
+   if(initial){initial=false;return;}
+   if(!pending)return;
+   pending=false;button.disabled=false;
+   status.textContent='Your inquiry has been submitted. Please note: Google Forms does not provide independent receipt verification here. If you do not hear back, contact Raymond directly.';
+   form.reset();
+ });
+ form.addEventListener('submit',function(e){
+   if(!form.reportValidity()){e.preventDefault();return;}
+   pending=true;button.disabled=true;
+   status.textContent='Submitting your inquiry to Google Forms…';
+   window.setTimeout(function(){if(pending){pending=false;button.disabled=false;status.textContent='We could not confirm the submission. Please use the original Google Form link below or contact Raymond directly.';}},15000);
+ });
+})();
