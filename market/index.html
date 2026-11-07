@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 
-<html lang="en-CA"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Market · Raymond Chen</title><meta content="Explore Greater Toronto real estate prices, sales and listing trends with Raymond Chen." name="description"/><link href="brand.png" rel="icon"/><link href="fonts.css" rel="stylesheet"/><link href="style.css?v=2" rel="stylesheet"/><link href="../site.css?v=2" rel="stylesheet"/><link href="../market-theme.css?v=5" rel="stylesheet"/><meta content="Market | Raymond Chen" property="og:title"/><meta content="Explore Toronto and GTA prices, sales and listing trends by month and property type." property="og:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Toronto and GTA Market Data", "url": "https://raymond-chen-real-estate.workspace-410986.chatgpt.site/market/"}</script><link href="../revision.css?v=8" rel="stylesheet"/><link href="../luxury-redesign.css?v=1" rel="stylesheet"/><link href="../v3-refined.css?v=3" rel="stylesheet"/><link href="../editorial.css" rel="stylesheet"/><link href="../v5.css" rel="stylesheet"/><link href="../v6.css" rel="stylesheet"/><link href="../v9-fixes.css" rel="stylesheet"/><link href="../v10-native.css?v=10" rel="stylesheet"/></head>
+<html lang="en-CA"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Market · Raymond Chen</title><meta content="Explore Greater Toronto real estate prices, sales and listing trends with Raymond Chen." name="description"/><link href="brand.png" rel="icon"/><link href="fonts.css" rel="stylesheet"/><link href="style.css?v=2" rel="stylesheet"/><link href="../site.css?v=2" rel="stylesheet"/><link href="../market-theme.css?v=5" rel="stylesheet"/><meta content="Market | Raymond Chen" property="og:title"/><meta content="Explore Toronto and GTA prices, sales and listing trends by month and property type." property="og:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Toronto and GTA Market Data", "url": "https://raymond-chen-real-estate.workspace-410986.chatgpt.site/market/"}</script><link href="../revision.css?v=8" rel="stylesheet"/><link href="../luxury-redesign.css?v=1" rel="stylesheet"/><link href="../v3-refined.css?v=3" rel="stylesheet"/><link href="../editorial.css" rel="stylesheet"/><link href="../v5.css" rel="stylesheet"/><link href="../v6.css" rel="stylesheet"/><link href="../v9-fixes.css" rel="stylesheet"/><link href="../v10-native.css?v=10" rel="stylesheet"/><style id="market-hero-v12-fix">/* Standalone Market hero: does not depend on patch CSS files. */
+html body section.page-hero.market-hero {
+  display:flex!important; align-items:center!important; position:relative!important;
+  width:100%!important; max-width:none!important; box-sizing:border-box!important;
+  height:480px!important; min-height:480px!important; max-height:480px!important;
+  padding:0!important; margin:0!important; overflow:hidden!important;
+  background-image:linear-gradient(90deg,rgba(7,27,47,.80) 0%,rgba(7,27,47,.45) 55%,rgba(7,27,47,.14) 100%),url('../assets/market-hero.webp')!important;
+  background-size:cover!important; background-position:center 52%!important; background-repeat:no-repeat!important;
+  isolation:auto!important;
+}
+html body section.page-hero.market-hero .page-hero-copy {
+  position:relative!important; z-index:2!important; width:100%!important;
+  max-width:1280px!important; margin:0 auto!important; padding:32px!important;
+  box-sizing:border-box!important; transform:none!important;
+}
+html body section.page-hero.market-hero h1 {
+  color:#fff!important; font-family:Georgia,serif!important;
+  font-size:clamp(2.8rem,5vw,4.8rem)!important; line-height:1.1!important;
+  max-width:850px!important; margin:0 0 20px!important;
+}
+html body section.page-hero.market-hero p {
+  color:#f5f0e9!important; max-width:700px!important;
+  font-size:clamp(1rem,1.6vw,1.3rem)!important; line-height:1.6!important; margin:0!important;
+}
+@media(max-width:760px){
+  html body section.page-hero.market-hero{height:390px!important;min-height:390px!important;max-height:390px!important;background-position:55% center!important}
+  html body section.page-hero.market-hero .page-hero-copy{padding:24px!important}
+}</style></head>
 <body class="market-page">
 <a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="header-inner container"><a aria-label="Raymond Chen Home" class="site-logo" href="../index.html"><img alt="Raymond Chen" class="logo-dark" height="58" src="../brand.png" width="140"/><img alt="Raymond Chen" class="logo-light" height="70" src="../assets/logo-white.webp" width="160"/><span class="logo-name">Raymond Chen<small>Real Estate Broker</small></span></a><button aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation" class="nav-toggle"><svg viewbox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button><nav aria-label="Main navigation" class="site-nav" id="site-nav"><a href="../index.html">Home</a><a href="../about/index.html">About</a><a href="../buy-sell/index.html">Buying &amp; Selling</a><a href="../leasing/index.html">Leasing &amp; Rentals</a><a href="../market/index.html">Market</a><a href="../contact/index.html">Contact</a></nav></div></header>
 <main class="market-main" id="main-content">
-<section aria-labelledby="page-title" class="page-hero market-hero"><img alt="Toronto-inspired waterfront cityscape at dusk — architectural concept" fetchpriority="high" height="887" src="../assets/market-hero.webp" width="1774"/><div aria-hidden="true" class="page-hero-shade"></div><div class="container page-hero-copy"><h1 id="page-title">Toronto &amp; GTA Real Estate Market</h1><p>A clearer perspective on local prices, sales and market trends.</p></div></section><div class="market-content">
+<section aria-labelledby="page-title" class="page-hero market-hero"><div class="container page-hero-copy"><h1 id="page-title">Toronto &amp; GTA Real Estate Market</h1><p>A clearer perspective on local prices, sales and market trends.</p></div></section><div class="market-content">
 <div class="filters"><label>Region<select id="region"></select></label><label>Property type<select id="property"></select></label><label>Report month<select id="period"></select></label><button class="plain" id="reset">Reset filters</button></div>
 <p class="market-notice" hidden="" id="market-notice" role="status"></p>
 <section aria-label="Monthly market overview" class="kpis" id="kpis"></section>
