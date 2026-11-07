@@ -1,0 +1,3 @@
+OPEN PREVIEW_HOME_OFFLINE.html for the home page. It contains embedded styling and images and works by double-clicking in Chrome.
+For ALL PAGES, open the complete site folder with VS Code Live Server or run python -m http.server 8000 in this folder, then visit http://localhost:8000/ .
+Keep all folders together. Do not open HTML from inside the ZIP preview.

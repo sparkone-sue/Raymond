@@ -1,0 +1,8 @@
+
+/* Leasing checklist: compact and calm */
+.move-in-checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;margin-top:30px}
+.move-in-item{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border:1px solid #e1d9cd;cursor:pointer;min-width:0}
+.move-in-item input{appearance:auto;accent-color:#ad8253;width:18px;height:18px;flex:none;margin:4px 0 0}
+.move-in-item span{display:block;min-width:0}.move-in-item strong{display:block;font-size:16px;line-height:1.4;color:#102b40;font-weight:600}
+.move-in-item small{display:block;color:#5d6b76;font-size:13px;line-height:1.55;margin-top:3px}.move-in-item:has(input:checked){background:#f5f1e9}.move-in-item input:checked+span strong{text-decoration:line-through;opacity:.65}
+@media(max-width:700px){.move-in-checklist{grid-template-columns:1fr;gap:9px}.move-in-item{padding:13px 15px}}

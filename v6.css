@@ -1,0 +1,61 @@
+
+/* V6 – unified page architecture */
+:root{--v6-navy:#102b40;--v6-gold:#b58b58;--v6-cream:#f7f4ef}
+body:not(.home) .editorial-page-hero,body:not(.home) .about-hero-v6,body:not(.home) .page-hero.contact-hero{height:clamp(410px,37vw,540px)!important;min-height:410px!important;max-height:540px!important;box-sizing:border-box;position:relative;overflow:hidden}
+body:not(.home) .editorial-page-hero{padding-top:115px!important;padding-bottom:58px!important;display:flex;align-items:center}
+body:not(.home) .editorial-page-hero .container{position:relative;z-index:2}
+body:not(.home) .editorial-page-hero h1{font-size:clamp(3rem,5.5vw,5.8rem)!important;line-height:1.07!important;max-width:1000px;margin-top:16px!important}
+.about-hero-v6{display:flex;align-items:center;background:#0b2335}
+.about-hero-v6>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.about-hero-v6 .about-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,28,44,.95),rgba(7,28,44,.7) 48%,rgba(7,28,44,.1))}
+.about-hero-v6 .about-hero-content{position:relative;z-index:2;color:white;width:100%;padding-top:35px;padding-bottom:30px}
+.about-hero-v6 .editorial-eyebrow{color:#d8b482;letter-spacing:.2em}
+.about-hero-v6 h1{font-family:Georgia,serif;color:white;font-size:clamp(3.1rem,5.5vw,5.9rem);line-height:1.07;font-weight:400;margin:22px 0;max-width:930px}
+.about-hero-v6 h1 em{color:#e5c79b;font-weight:400}
+.about-hero-v6 p{max-width:570px;font-size:1.15rem;line-height:1.7;color:#f1ede6}
+.about-hero-signature{display:block;margin-top:22px;color:#d6b17c;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem}
+.profile-section .profile-copy{min-width:0}
+.profile-section .profile-copy .profile-identity h2{margin:8px 0 18px}
+.profile-position,.about-brokerage{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin:0 0 18px!important;color:#17334b}
+.profile-position strong,.about-brokerage strong{font-size:1.25rem;font-weight:700}
+.profile-position span,.about-brokerage span{font-size:.97rem;color:#506072}
+.profile-section .profile-credentials{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 24px!important}
+.profile-section .profile-credentials span{background:#f4f0ea;border:1px solid #e5dcd0;padding:9px 12px;font-size:.75rem;letter-spacing:.025em;line-height:1.45}
+.profile-section .profile-bio{font-size:1.05rem;line-height:1.85;margin:0 0 20px}
+.profile-section .profile-recognition{border-top:1px solid #d9d0c6;margin-top:32px;padding-top:27px}
+.profile-section .recognition-header h3{font-size:clamp(1.6rem,2.4vw,2.3rem);margin:7px 0 20px}
+.award-group-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.award-feature{background:#fff;border:1px solid #e1d7ca;padding:20px 18px;display:flex;flex-direction:column;gap:7px;min-width:0}
+.award-glyph{color:#b48c5b;font-size:2rem;line-height:1}
+.award-period{color:#a67c4c;font-size:.78rem;letter-spacing:.13em}
+.award-feature strong{font-family:Georgia,serif;color:#183147;font-size:1.45rem}
+.award-feature small{color:#63707a}
+.special-awards{margin-top:16px;border-top:1px solid #e0d8ce}
+.special-awards>div{display:flex;gap:18px;align-items:baseline;border-bottom:1px solid #e0d8ce;padding:11px 3px}
+.special-awards span{min-width:48px;color:#ae8252;font-size:.82rem}
+.special-awards strong{font-weight:500;color:#17334b;font-size:.95rem}
+.contact-v6-section{background:#f8f6f2;padding:78px 0 105px}
+.contact-v6-intro{text-align:center;max-width:790px;margin:0 auto 42px}
+.contact-v6-intro h2{font-family:Georgia,serif;font-size:clamp(2.2rem,3.7vw,3.6rem);line-height:1.14;color:#122d43;font-weight:400;margin:14px 0}
+.contact-v6-intro p{color:#5c6975;line-height:1.75;font-size:1.05rem}
+.contact-v6-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(265px,.85fr);gap:28px;align-items:start;max-width:1190px;margin:auto}
+.contact-v6-form{background:white;border:1px solid #e9e1d8;padding:36px 38px;box-shadow:0 18px 60px rgba(14,39,58,.045)}
+.contact-v6-form .container{padding:0!important;max-width:none!important;width:100%!important}
+.contact-v6-form .native-form{box-shadow:none!important;background:transparent!important;border:0!important;padding:0!important;max-width:none!important}
+.contact-v6-form .native-form h2{font-size:1.75rem!important;color:#17334b;margin:0 0 8px}
+.contact-v6-aside{background:#102b40;color:#fff;padding:38px 33px;min-height:430px}
+.contact-v6-aside .editorial-eyebrow{color:#d4ad7d}
+.contact-v6-aside h3{font-family:Georgia,serif;font-weight:400;font-size:2.5rem;margin:15px 0}
+.contact-v6-aside p{color:#c8d3dc;line-height:1.7}
+.contact-v6-list{display:flex;flex-direction:column;margin:26px 0;border-top:1px solid #395267}
+.contact-v6-list a{color:#fff;text-decoration:none;border-bottom:1px solid #395267;padding:15px 0;display:flex;flex-direction:column;gap:4px;overflow-wrap:anywhere}
+.contact-v6-list small,.contact-v6-office small{color:#d4ad7d;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem}
+.contact-v6-list strong{font-size:1rem;font-weight:500}
+.contact-v6-office{display:flex;flex-direction:column;gap:7px;color:#d8e0e5;line-height:1.55}
+.contact-v6-office strong{color:#fff;font-size:.9rem}
+body.contact .contact-hero{display:flex;align-items:center}
+body.contact .contact-hero .page-hero-copy{padding-top:20px!important;padding-bottom:25px!important;position:relative;z-index:2}
+body.contact .contact-hero h1{font-size:clamp(3rem,5.2vw,5.6rem)!important;line-height:1.08!important}
+body.contact .contact-hero .editorial-eyebrow{color:#e2bd88}
+@media(max-width:850px){.contact-v6-layout{grid-template-columns:1fr}.contact-v6-aside{min-height:0}.contact-v6-section{padding:55px 0}.profile-section .profile-copy{padding-top:30px}}
+@media(max-width:600px){.award-group-grid{grid-template-columns:1fr}.about-hero-v6 h1{font-size:clamp(2.6rem,10vw,4rem)}.contact-v6-form,.contact-v6-aside{padding:24px}.contact-v6-intro{text-align:left}body:not(.home) .editorial-page-hero,body:not(.home) .about-hero-v6,body:not(.home) .page-hero.contact-hero{height:440px!important;min-height:440px!important}}

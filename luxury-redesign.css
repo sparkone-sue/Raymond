@@ -1,0 +1,28 @@
+
+/* Raymond Chen — restrained editorial navy redesign */
+:root{--lux-navy:#102b46;--lux-deep:#091c30;--lux-gold:#bd9561;--lux-ivory:#f6f3ee;--lux-ink:#243548}
+body{background:var(--lux-ivory);color:var(--lux-ink)}
+.section.pale,.pale{background:#f4f1eb!important}
+.stat-band,.site-footer,.contact-section,.recognition-section{background-color:var(--lux-deep)!important;background-image:linear-gradient(120deg,rgba(7,22,39,.46),rgba(12,39,64,.12)),url('assets/texture-navy.webp')!important;background-size:cover!important;background-position:center!important}
+.site-footer,.contact-section,.recognition-section{color:#f9f7f3}
+.hero{position:relative;min-height:min(790px,90vh);overflow:hidden;background:#142b3c}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,24,40,.86) 0%,rgba(8,28,46,.68) 37%,rgba(9,28,44,.10) 85%)}
+.hero .hero-copy{position:relative;z-index:2;min-height:min(790px,90vh);display:flex;align-items:center;padding-top:125px;padding-bottom:105px}
+.hero .hero-editorial{max-width:700px;color:#fff}
+.hero .eyebrow,.eyebrow{display:block;font-size:12px;letter-spacing:.24em;font-weight:600;text-transform:uppercase;color:var(--lux-gold)}
+.hero .hero-rule{display:block;width:60px;height:1px;background:var(--lux-gold);margin:27px 0}
+.hero .hero-editorial h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.035em;line-height:1.05;font-size:clamp(52px,6.4vw,100px);margin:0 0 25px;color:white;text-transform:none}
+.hero .hero-editorial h1 em{font-weight:400;color:#e6c99c}
+.hero .hero-editorial p{font-size:clamp(16px,1.45vw,21px);max-width:510px;line-height:1.7;color:#e8e9e9;margin-bottom:30px}
+.hero-actions{display:flex;align-items:center;gap:28px;flex-wrap:wrap}.hero-actions .button{background:var(--lux-gold);border-color:var(--lux-gold);color:#10253a}.hero-text-link{color:white;text-decoration:none;border-bottom:1px solid #cba875;padding-bottom:7px;letter-spacing:.04em}.hero-side-label{position:absolute;z-index:2;right:35px;bottom:36px;color:#fff;letter-spacing:.22em;font-size:10px;opacity:.75}
+.property-card{overflow:hidden}.property-card>a{position:relative;display:block}.property-card .property-caption{background:rgba(9,30,51,.72)!important;background-image:none!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.19);padding-top:20px;padding-bottom:20px}
+.property-card .property-caption h3,.property-card .property-caption p{color:#fff!important;text-shadow:none!important}
+.about-biography,.inquiry-section{background:#f8f6f2!important}
+.credential-line{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 27px}.credential-line span{border:1px solid #d8d1c4;padding:7px 12px;font-size:12px;letter-spacing:.07em;color:#33465c;background:#fff9}
+.recognition-section{padding:95px 0}.recognition-heading{text-align:center;max-width:750px;margin:0 auto 42px}.recognition-heading h2{font:normal clamp(35px,4vw,55px)/1.15 Georgia,serif;color:white;margin:16px 0}.recognition-heading p{color:#d7dce1}.recognition-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}.recognition-card{padding:26px 18px 25px;background:rgba(255,255,255,.075);border:1px solid rgba(221,199,166,.3);text-align:center;min-height:220px}.recognition-icon{display:block;color:#e4bc7e;font:normal 44px/1 Georgia,serif;margin-bottom:23px}.recognition-years{font-size:10px;letter-spacing:.12em;color:#d6b78d}.recognition-card h3{font:normal 22px/1.2 Georgia,serif;color:white;margin:12px 0 8px}.recognition-card p{font-size:12px;color:#d2d6dc;margin:0}
+.google-form-panel{background:#fff!important;border:1px solid #e5dfd6!important;box-shadow:0 24px 65px rgba(18,37,56,.08);padding:26px!important}.form-intro{padding:12px 15px 22px}.form-intro h2{font:normal 32px/1.2 Georgia,serif;color:#1b344d;margin:12px 0}.form-intro p{color:#65717a}.google-form{display:block;width:100%;max-width:100%;height:1100px;border:0;background:white}.form-note{font-size:13px}
+/* Reduce flat colored slabs across pages without disrupting content */
+.about-services,.page-hero,.contact-hero{background-color:var(--lux-navy)!important;background-image:linear-gradient(120deg,rgba(8,24,42,.40),rgba(12,42,69,.20)),url('assets/texture-navy.webp')!important;background-size:cover!important}
+.button{transition:transform .2s ease,background .2s ease}.button:hover{transform:translateY(-2px)}
+@media(max-width:1000px){.recognition-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.hero,.hero .hero-copy{min-height:690px}.hero .hero-shade{background:linear-gradient(90deg,rgba(6,24,40,.86),rgba(6,24,40,.45))}.hero .hero-copy{padding-top:135px;padding-bottom:80px}.hero .hero-editorial h1{font-size:clamp(49px,12vw,72px)}.hero-side-label{right:20px;bottom:18px;font-size:8px}.recognition-section{padding:65px 0}.recognition-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.recognition-card{min-height:205px;padding:22px 10px}.recognition-card h3{font-size:19px}.google-form-panel{padding:8px!important}.google-form{height:1200px}}

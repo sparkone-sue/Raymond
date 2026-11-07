@@ -1,0 +1,11 @@
+Raymond Chen website redesign — 2026-11-07
+
+Updated hero, transparent listing overlays, textured navy sections, about credentials, recognition cards and unified Google Form.
+
+Google Form: https://docs.google.com/forms/d/e/1FAIpQLSc91kvVM2Lx69vHJf2Uokxqjj31DHA-I17QwApOw-2e5Y8bfA/viewform
+
+IMPORTANT: Google Forms iframe keeps Google styling; it cannot be fully reskinned from the website CSS.
+
+Deploy the CONTENTS of this website folder to the root of GitHub Pages.
+Check the Google Form accepts external responses and that contact notifications are configured.
+Verify domain/canonical metadata when the final GoDaddy domain is known.

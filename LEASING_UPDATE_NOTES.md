@@ -1,0 +1,1 @@
+V7 Leasing update: compact interactive checklist; LTB links now point to direct official PDFs rather than forms directory. PDFs are NOT locally hosted, because official files could not be retrieved in this environment. Download via the PDF viewer. Verify URLs before publication and refresh after LTB updates.
