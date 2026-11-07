@@ -58,17 +58,23 @@ function createPanel(panel,metric,sharedState){
  const selectors={'chart-title':'h2','chart-subtitle':'.chart-subtitle','unit':'.chart-unit','years':'.years','range':'.chart-range','chart-kind':'.chart-kind','chart':'.chart','chart-detail':'.chart-detail','coverage':'.chart-coverage'};
  const $=id=>panel.querySelector(selectors[id]);
  let months=[],series=[],readIndex=0,barLayout=null;
+ const isListingsMetric=['newListings','activeListings'].includes(state.metric);
+ const segmentHasMetric=()=>currentRows().some(r=>r[state.metric]!=null);
+ const useOverall=()=>isListingsMetric&&!segmentHasMetric();
+ const metricRows=()=>useOverall()?rows.filter(r=>r.region==='Overall'&&r.property==='All'):currentRows();
+ const metricGet=(year,month)=>metricRows().find(r=>r.year===year&&r.month===month);
+
  function render(){
- $('chart-title').textContent=names[state.metric];$('chart-subtitle').textContent=`${regionNames[state.region]||state.region} / ${propertyNames[state.property]||state.property} · Monthly comparison`;
+ $('chart-title').textContent=names[state.metric];$('chart-subtitle').textContent=useOverall()?'GTA · Overall / All properties · Monthly comparison (regional breakdown not supplied)':`${regionNames[state.region]||state.region} / ${propertyNames[state.property]||state.property} · Monthly comparison`;
  $('unit').textContent=state.metric==='price'?'Canadian dollars · CAD':'Number of homes';
  document.querySelectorAll('[data-metric]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.metric===state.metric)));
- const available=[state.year-2,state.year-1,state.year].filter(y=>currentRows().some(r=>r.year===y&&r[state.metric]!=null));
+ const available=[state.year-2,state.year-1,state.year].filter(y=>metricRows().some(r=>r.year===y&&r[state.metric]!=null));
  $('years').replaceChildren(...available.map(y=>{const b=document.createElement('button');b.type='button';b.className='year';b.style.setProperty('--year-color',color(y));b.innerHTML=`<i></i>${y}`;b.setAttribute('aria-pressed',String(!state.hidden.has(y)));b.setAttribute('aria-label',`${state.hidden.has(y)?'Show':'Hide'} ${y}`);b.onclick=()=>{state.hidden.has(y)?state.hidden.delete(y):state.hidden.add(y);render()};return b}));
  const range=$('range').value;const start=range==='6'?Math.max(1,state.month-5):1,end=range==='12'?12:state.month;
  months=Array.from({length:end-start+1},(_,i)=>start+i);
- series=available.filter(y=>!state.hidden.has(y)).reverse().map(y=>({name:String(y),colour:color(y),values:months.map(m=>get(y,m)?.[state.metric]??null)}));
+ series=available.filter(y=>!state.hidden.has(y)).reverse().map(y=>({name:String(y),colour:color(y),values:months.map(m=>metricGet(y,m)?.[state.metric]??null)}));
  draw();readIndex=Math.max(0,months.indexOf(state.month));readout(readIndex);
- const valid=currentRows().filter(v=>v.year===state.year&&v[state.metric]!=null).map(v=>v.month);
+ const valid=metricRows().filter(v=>v.year===state.year&&v[state.metric]!=null).map(v=>v.month);
  $('coverage').textContent=valid.length?`${state.year} data available: ${monthName(Math.min(...valid))}–${monthName(Math.max(...valid))}`:'This metric is not available for the selected year';
  }
 function readout(i){readIndex=Math.max(0,Math.min(months.length-1,i));$('chart-detail').innerHTML=`<strong>${monthName(months[readIndex])}</strong>`+series.map(s=>`<span class="readout" style="--year-color:${s.colour}"><i></i>${s.name}<b>${fmt(s.values[readIndex],state.metric)}</b></span>`).join('')}
