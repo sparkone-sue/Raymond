@@ -1,0 +1,13 @@
+/* V14: compact homepage hero spacing; preserve all inner-page heroes. */
+@media (min-width: 761px) {
+  body.home .hero { min-height: 690px !important; }
+  body.home .hero .hero-copy { min-height: 690px !important; padding-top: 48px !important; padding-bottom: 55px !important; transform: translateY(-42px); }
+  body.home .hero .hero-editorial { padding-top: 0 !important; }
+  body.home .hero > img { width: 100% !important; height: 100% !important; position: absolute !important; inset: 0; object-fit: cover !important; }
+}
+@media (max-width: 760px) {
+  body.home .hero, body.home .hero .hero-copy { min-height: 610px !important; }
+  body.home .hero .hero-copy { padding-top: 76px !important; padding-bottom: 45px !important; }
+}
+/* Google Forms remains the submission backend, not a visible destination. */
+body.contact .form-fallback { display: none !important; }

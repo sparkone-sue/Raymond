@@ -1,0 +1,4 @@
+/* V13 responsive safeguards. Existing V12 hero and V11 form logic are untouched. */
+html{overflow-x:clip}img,video,iframe{max-width:100%} .site-main{min-width:0}
+@media(max-width:767px){.site-header .header-inner{min-width:0}.site-logo{min-width:0}.site-nav{max-width:100vw}.page-hero h1,.hero h1{overflow-wrap:normal;word-break:normal}.container{max-width:100%}.contact-v6-grid,.contact-v6-layout,.calculator-grid,.editorial-grid{min-width:0}.native-form input,.native-form select,.native-form textarea{max-width:100%;box-sizing:border-box}.transactions-track{max-width:100%;overflow-x:auto}}
+.ltb-update-note{margin:1rem 0 1.5rem;line-height:1.6;font-size:.95rem}
