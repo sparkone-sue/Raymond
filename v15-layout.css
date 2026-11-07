@@ -1,0 +1,14 @@
+/* V15: editorial portrait panel, placed immediately after homepage hero/stat band. */
+body.home .profile-section{background:#f8f6f2!important;padding:clamp(48px,6vw,100px) 0!important;}
+body.home .profile-section .container{width:min(1280px,calc(100% - 96px))!important;max-width:1280px!important;margin-inline:auto!important;}
+body.home .profile-section .profile-grid{display:grid!important;grid-template-columns:minmax(0,0.86fr) minmax(0,1.14fr)!important;gap:clamp(38px,5.2vw,92px)!important;align-items:center!important;}
+body.home .profile-section .profile-photo{background:transparent!important;padding:18px 0 18px clamp(14px,3.5vw,60px)!important;position:relative;align-self:start;}
+body.home .profile-section .profile-photo:before{content:'';position:absolute;inset:0 12% 12% 0;background:#e6e8e8;z-index:0;}
+body.home .profile-section .profile-photo img{position:relative;z-index:1;display:block;width:100%!important;height:auto!important;max-height:650px!important;aspect-ratio:4/5;object-fit:cover!important;object-position:center top!important;background:transparent!important;box-shadow:0 14px 32px #1a2d401c;}
+body.home .profile-section .profile-copy{padding:0!important;min-width:0!important;}
+body.home .profile-section .profile-copy h2{font-size:clamp(34px,3.2vw,52px)!important;line-height:1.13!important;}
+body.home .profile-section .profile-copy>p{font-size:clamp(15px,1.1vw,18px)!important;line-height:1.7!important;margin-top:22px!important;}
+body.home .profile-section .profile-recognition{margin-top:28px!important;padding-top:24px!important;}
+body.home .profile-section .profile-credentials{gap:7px!important;}
+@media(max-width:900px){body.home .profile-section .container{width:calc(100% - 48px)!important;}body.home .profile-section .profile-grid{grid-template-columns:1fr!important;gap:28px!important;}body.home .profile-section .profile-photo{max-width:510px;margin:auto;padding:12px 0 12px 24px!important;}body.home .profile-section .profile-photo img{max-height:530px!important;}body.home .profile-section .profile-copy{padding:0 4px!important;}}
+@media(max-width:600px){body.home .profile-section{padding:48px 0!important;}body.home .profile-section .container{width:calc(100% - 36px)!important;}body.home .profile-section .profile-photo{max-width:370px;}body.home .profile-section .profile-copy h2{font-size:34px!important;}}
