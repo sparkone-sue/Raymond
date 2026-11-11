@@ -20,3 +20,46 @@ body.home .profile-section .v16-recognition .v7-award-company{font-size:13px!imp
 @media(max-width:900px){body.home .profile-section .container{width:calc(100% - 48px)!important;}body.home .profile-section .profile-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)!important;gap:26px!important;}body.home .profile-section .v16-recognition .v7-award-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;}body.home .profile-section .v16-recognition .v7-award-row:nth-child(2){border-right:0!important;}body.home .profile-section .v16-recognition .v7-award-row:nth-child(3),body.home .profile-section .v16-recognition .v7-award-row:nth-child(4){border-top:0!important;}}
 @media(max-width:700px){body.home .profile-section .container{width:calc(100% - 36px)!important;}body.home .profile-section .profile-grid{grid-template-columns:1fr!important;gap:28px!important;}body.home .profile-section .profile-photo{width:min(100%,390px)!important;margin:0 auto!important;}body.home .profile-section .profile-photo img{max-height:480px!important;}body.home .profile-section .v16-recognition{margin-top:32px!important;}body.home .profile-section .v16-recognition .v7-award-row{padding:16px 12px!important;}body.home .profile-section .v16-recognition .v7-award-row:first-child{padding-left:0!important;}}
 @media(max-width:420px){body.home .profile-section .v16-recognition .v7-award-list{grid-template-columns:1fr!important;}body.home .profile-section .v16-recognition .v7-award-row{border-right:0!important;border-top:1px solid #d8d1c7!important;padding:14px 0!important;}}
+
+/* V16.2: Make recognition span the complete profile grid, not the photo column. */
+body.home .profile-section .profile-grid > .profile-recognition.v16-recognition{
+  grid-column:1 / -1!important;
+  grid-row:auto!important;
+  width:100%!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+  display:grid!important;
+  grid-template-columns:minmax(190px,.29fr) minmax(0,.71fr)!important;
+  align-items:start!important;
+  column-gap:clamp(28px,4vw,64px)!important;
+  margin:clamp(18px,2.5vw,32px) 0 0!important;
+  padding:clamp(24px,3vw,38px) 0 0!important;
+}
+body.home .profile-section .v16-recognition .recognition-header{margin:0!important;}
+body.home .profile-section .v16-recognition .recognition-header h3{
+  font-size:clamp(25px,2.7vw,38px)!important;
+  line-height:1.1!important;
+}
+body.home .profile-section .v16-recognition .v7-award-list{
+  width:100%!important;
+  min-width:0!important;
+  align-self:start!important;
+}
+body.home .profile-section .v16-recognition .v7-award-row{
+  padding:12px clamp(10px,1.4vw,20px)!important;
+}
+body.home .profile-section .v16-recognition .v7-award-row:first-child{padding-left:0!important;}
+@media(max-width:900px){
+  body.home .profile-section .profile-grid > .profile-recognition.v16-recognition{
+    grid-template-columns:1fr!important;
+    row-gap:18px!important;
+  }
+  body.home .profile-section .v16-recognition .v7-award-row:nth-child(3),
+  body.home .profile-section .v16-recognition .v7-award-row:nth-child(4){border-top:0!important;}
+}
+@media(max-width:700px){
+  body.home .profile-section .profile-grid > .profile-recognition.v16-recognition{
+    grid-column:1!important;
+    margin-top:4px!important;
+  }
+}
