@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sparkone-sue.github.io/Raymond/</loc></url>
-  <url><loc>https://sparkone-sue.github.io/Raymond/about/</loc></url>
-  <url><loc>https://sparkone-sue.github.io/Raymond/buy-sell/</loc></url>
-  <url><loc>https://sparkone-sue.github.io/Raymond/leasing/</loc></url>
-  <url><loc>https://sparkone-sue.github.io/Raymond/market/</loc></url>
-  <url><loc>https://sparkone-sue.github.io/Raymond/contact/</loc></url>
-  <url><loc>https://sparkone-sue.github.io/Raymond/privacy/</loc></url>
-  <url><loc>https://sparkone-sue.github.io/Raymond/terms/</loc></url>
+  <url>
+    <loc>https://raymondchen.ca/</loc>
+  </url>
+  <url>
+    <loc>https://raymondchen.ca/about/</loc>
+  </url>
+  <url>
+    <loc>https://raymondchen.ca/buy-sell/</loc>
+  </url>
+  <url>
+    <loc>https://raymondchen.ca/leasing/</loc>
+  </url>
+  <url>
+    <loc>https://raymondchen.ca/market/</loc>
+  </url>
+  <url>
+    <loc>https://raymondchen.ca/contact/</loc>
+  </url>
 </urlset>

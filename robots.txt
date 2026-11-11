@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /Raymond/
-Sitemap: https://sparkone-sue.github.io/Raymond/sitemap.xml
+Allow: /
+
+Sitemap: https://raymondchen.ca/sitemap.xml

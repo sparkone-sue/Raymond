@@ -1,0 +1,22 @@
+/* V16: balanced portrait + achievements layout. */
+body.home .profile-section{padding:clamp(44px,5vw,78px) 0!important;}
+body.home .profile-section .container{width:min(1240px,calc(100% - 80px))!important;max-width:1240px!important;}
+body.home .profile-section .profile-grid{grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr)!important;gap:clamp(32px,5vw,76px)!important;align-items:center!important;}
+body.home .profile-section .profile-photo{padding:0!important;margin:0!important;align-self:center!important;max-width:440px!important;}
+body.home .profile-section .profile-photo:before{inset:20px -16px -18px 20px!important;background:#e7e7e3!important;}
+body.home .profile-section .profile-photo img{width:100%!important;max-height:540px!important;aspect-ratio:4/5!important;object-fit:cover!important;object-position:center top!important;}
+body.home .profile-section .profile-copy{align-self:center!important;}
+body.home .profile-section .profile-copy .profile-bio{margin-top:20px!important;}
+body.home .profile-section .v16-recognition{margin:clamp(34px,4vw,56px) 0 0!important;padding:30px 0 0!important;border-top:1px solid #d8d1c7;}
+body.home .profile-section .v16-recognition .recognition-header{margin-bottom:24px!important;}
+body.home .profile-section .v16-recognition h3{font-size:clamp(28px,3vw,42px)!important;}
+body.home .profile-section .v16-recognition .v7-award-list{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:0!important;}
+body.home .profile-section .v16-recognition .v7-award-row{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:8px!important;padding:18px 20px!important;border-top:1px solid #d8d1c7!important;border-bottom:0!important;border-right:1px solid #d8d1c7!important;min-width:0!important;}
+body.home .profile-section .v16-recognition .v7-award-row:first-child{padding-left:0!important;}
+body.home .profile-section .v16-recognition .v7-award-row:last-child{border-right:0!important;}
+body.home .profile-section .v16-recognition .v7-award-year{font-size:14px!important;}
+body.home .profile-section .v16-recognition .v7-award-name{font-size:clamp(17px,1.65vw,22px)!important;line-height:1.35!important;}
+body.home .profile-section .v16-recognition .v7-award-company{font-size:13px!important;}
+@media(max-width:900px){body.home .profile-section .container{width:calc(100% - 48px)!important;}body.home .profile-section .profile-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)!important;gap:26px!important;}body.home .profile-section .v16-recognition .v7-award-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;}body.home .profile-section .v16-recognition .v7-award-row:nth-child(2){border-right:0!important;}body.home .profile-section .v16-recognition .v7-award-row:nth-child(3),body.home .profile-section .v16-recognition .v7-award-row:nth-child(4){border-top:0!important;}}
+@media(max-width:700px){body.home .profile-section .container{width:calc(100% - 36px)!important;}body.home .profile-section .profile-grid{grid-template-columns:1fr!important;gap:28px!important;}body.home .profile-section .profile-photo{width:min(100%,390px)!important;margin:0 auto!important;}body.home .profile-section .profile-photo img{max-height:480px!important;}body.home .profile-section .v16-recognition{margin-top:32px!important;}body.home .profile-section .v16-recognition .v7-award-row{padding:16px 12px!important;}body.home .profile-section .v16-recognition .v7-award-row:first-child{padding-left:0!important;}}
+@media(max-width:420px){body.home .profile-section .v16-recognition .v7-award-list{grid-template-columns:1fr!important;}body.home .profile-section .v16-recognition .v7-award-row{border-right:0!important;border-top:1px solid #d8d1c7!important;padding:14px 0!important;}}
